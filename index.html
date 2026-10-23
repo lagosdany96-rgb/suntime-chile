@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Suntime Chile</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header class="bg-primary text-white text-center py-5">
+            <div class="container">
+                <h1> Suntime chile </h1>
+                <p class="mb-0"> Consulta la salida y puesta del sol en tu ciudad </p>
+            </div>
+        </header>
+        <main class="container my-5">
+            <section class="mb-5">
+                <h2 class="text-center mb-4">Selecciona una ciudad </h2>
+                <div class="row justify-content-center">
+
+                </div>
+                <div class="col-md-6">
+
+                </div>
+                    <label for="ciudad" class="form-label">
+                    Cuidad </label>
+                    <select id="ciudad" class="form-select mb-3">
+                        <option value="-33.0245,-71.5518"> Viña del Mar </option>
+                        <option value="-33.0472,-71.6127"> Valparaiso</option>
+                        <option value="-33.4489,-70.6639"> Santiago</option>
+                        <option value="-36.8270,-73.0503"> Concepcion</option>
+                        <option value="-39.8142,-73.2459"> Valdivia</option>
+                        <option value="-41.4697,-72.9424"> Puerto montt</option>
+                        <option value="-53.1638,-70.9171"> Punta Arenas </option>
+                        <option value="-51.7236,-72.4875"> Puerto Natales</option>
+                        <option value="-55.0820,-67.6410"> Puerto Toro </option>
+                        <option value="-54.9336,-67.6090"> Puerto Williams </option>
+                    </select>
+                    <label for="fecha" class="form-label"> Fecha</label>
+                    <input type="date" id="fecha" class="form-control mb-3">
+                    <button id="btnConsultar" class="btn btn-primary w-100"> 
+                        Consultar
+                    </button>     
+                    </div> 
+                </div>
+            </section>
+            <section>
+                <div id="mensaje"
+                class="alert alert-danger d-none"
+                role="alert"></div>
+            </section>
+            <section id="seccionResultados" class="d-none">
+                <h2 class="text-center mb-4"> Informacion solar </h2>
+                <div id="resultados" class="row g-4 justify-content-center"></div>
+            </section>
+            <section id="seccionFiltro" class="mt-5 d-none"> </section>
+                <h2 class="text-center mb-4"> Filtar informacion </h2>
+                <div class="row justify-content-center"></div>
+                <div class="col-md-6"></div>
+                <label for="Filtro" class="form-label"> Mostrar</label>
+                <select id="Filtro" class="form-select">
+                <option value="todos"> Todos los datos
+                </option>
+                <option value="amanecer"> Solo amanecer
+                </option>
+                <option value="atardecer"> Solo atardecer
+                </option>
+                <option value="duracion"> Solo duracion del dia.
+                </option>
+                <option value="mediodia"> Solo mediodia solar     </option>
+            </select>
+        </main>
+        <footer class="bg-dark text-white text-center py-4">
+            <p class="mb-1"> &copy; 2023 Suntime Chile. Todos los derechos reservados. </p>
+            <p class="mb-0"> Datos proporcionados por 
+                <a href="https://api.sunrise-sunset.org/v2" class="text-white"> Sunrise-Sunset API class="org"></Sunrise-Sunset></a> </p>
+        </footer>
+        <script src="assets/script.js"></script>
+
+    </body>
+</html>
+
